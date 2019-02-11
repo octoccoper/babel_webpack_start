@@ -88,7 +88,11 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-let test = () => console.log(132);
+var test = function test() {
+  return console.log(132);
+};
+
+test();
 
 /***/ })
 /******/ ]);
