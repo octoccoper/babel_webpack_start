@@ -1,21 +1,19 @@
 const path = require("path");
 
 module.exports = {
+    mode: "none",
     entry: {
-        app: ".src/app.js"
+        app: "./src/app.js"
     },
     output: {
         path: path.resolve(__dirname, "build"),
         filename: "app.bundle.js"
     },
     module: {
-        loaders: [{
+        rules: [{
             test: /\.js?$/,
-            exclude: /node_modules/,
-            loader: "babel-loader",
-            query: {
-                presets: ["env"]
-            }
+            exclude: /node_modu;es/,
+            loader: "babel-loader"
         }]
     }
 }
